@@ -1,20 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import IntroductR2 from "./Examples/IntroductR2";
+import BoxGrabHereThere from "./Examples/BoxGrabHereThere";
+import ScrollViewAnim from "./Examples/ScrollViewAnim";
+import { SafeAreaView } from "react-native-safe-area-context";
 
+import InterpolateColors from "./Examples/InterpolateColors";
+import AppNavigator from "./navigation/AppNavigation";
+import { NavigationContainer } from "@react-navigation/native";
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={{ flex: 1 }}>
+      <NavigationContainer>
+        <AppNavigator />
+      </NavigationContainer>
+
+
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+
 });
